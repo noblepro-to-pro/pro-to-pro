@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro-to-Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pro-to-Pro</h1>
+        
+        <!-- Task Management -->
+        <section id="tasks">
+            <h2>Tasks</h2>
+            <input type="text" id="taskInput" placeholder="Add a task">
+            <input type="number" id="timeInput" placeholder="Est. time (min)">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Pomodoro Timer -->
+        <section id="pomodoro">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer">25:00</div>
+            <button onclick="startPomodoro()">Start</button>
+            <button onclick="resetPomodoro()">Reset</button>
+        </section>
+
+        <!-- Badges -->
+        <section id="badges">
+            <h2>Badges</h2>
+            <div id="badgeList"></div>
+        </section>
+
+        <!-- Diary -->
+        <section id="diary">
+            <h2>Diary</h2>
+            <textarea id="diaryEntry" placeholder="Reflect on your day..."></textarea>
+            <button onclick="saveDiary()">Save</button>
+            <div id="diaryList"></div>
+        </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
